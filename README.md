@@ -70,3 +70,15 @@ compared with:
 ```
 ++++++++[>++++[>++>+++>+++>+>+<<<<<-]>+>+>->+[<]<-]>>.>---.+++++++..+++.>>++++.>.<<-.<.+++.------.--------.>>>+.
 ```
+## Debugger
+now you can use ' in your script to show all informations you want like this
+```
+-----debugger1----
+---pointer---
+main:           point at 0      value: 1        char: 
+pointer1:       point at 15001  value: -128     char: �
+pointer2:       point at 15002  value: 32       char:  
+---array---
+0: 1    15001: -128 �   15002: 32  
+------------------
+```

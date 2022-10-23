@@ -7,12 +7,13 @@ int main(int argc, char **argv)
     char get;
     char arr[300010] = {0};
     char *main_ptr = arr + 15000;
-    char *temp_ptr = NULL;
+    char *temp_ptr = main_ptr;
     char *ptr[10];
     int circulate_stack[200];
     int function_stack[200];
     int circulate_stack_top = 0, function_stack_top = 0;
-    for (int i = 0; i < 10; i++)//
+    int debugger = 0;
+    for (int i = 0; i < 10; i++) //
     {
         ptr[i] = arr + i + 30000;
     }
@@ -324,6 +325,26 @@ int main(int argc, char **argv)
                 break;
             case '_':
                 system("clear");
+                break;
+            case '\'':
+                debugger++;
+                printf("\n-----debugger%d----\n",debugger);
+                printf("---pointer---\n");
+                printf("main:    \tpoint at %d\tvalue: %d\tchar: %c\n", main_ptr - arr - 15000, *main_ptr, *main_ptr);
+                if (temp_ptr == 0)
+                    printf("temp:    \tpoint at %d\tvalue: %d\tchar: %c\n", temp_ptr - arr - 15000, *temp_ptr, *temp_ptr);
+                for (int i = 0; i < 10; i++)
+                {
+                    if ((ptr[i] - arr) != 30000 + i || *ptr[i] != 0)
+                        printf("pointer%d: \tpoint at %d\tvalue: %d\tchar: %c\n", i, ptr[i] - arr - 15000, *ptr[i], *ptr[i]);
+                }
+                printf("---array---\n");
+                for (int i = 0; i < 30010; i++)
+                {
+                    if (arr[i] != 0)
+                        printf("%d: %d %c\t", i - 15000, arr[i], arr[i]);
+                }
+                printf("\n------------------\n");
                 break;
             default:
                 if (get >= 'A' && get <= 'Z')
