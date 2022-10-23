@@ -71,7 +71,7 @@ compared with:
 ++++++++[>++++[>++>+++>+++>+>+<<<<<-]>+>+>->+[<]<-]>>.>---.+++++++..+++.>>++++.>.<<-.<.+++.------.--------.>>>+.
 ```
 ## Debugger
-now you can use ' in your script to show all informations you want like this
+now you can use ' in your script to show all informations you want like this:
 ```
 -----debugger1----
 ---pointer---
